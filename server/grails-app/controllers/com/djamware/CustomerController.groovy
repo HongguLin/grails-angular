@@ -9,5 +9,11 @@ class CustomerController {
 
 	def scaffold = Customer;
 	
-    def index() { }
+    def index() { 
+    	def customers = Customer.list()
+        [customers:customers]
+    }
+    def hello(){
+    	render("Hello")
+    }
 }
